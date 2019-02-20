@@ -1,10 +1,25 @@
+body {
+    background-color: #F5564E;
+}
+
 .header {
-    background-color: #F9989F;
-    color: rgb(177, 33, 64);
+    background-color: #5B2E35;
+    color: #F5E4C3;
+}
+
+.main {
+    background-color: #34A7B2;
+    color: rgb(15, 90, 97);
+
+    position: absolute;
+    top: 8%;
+   
+    height: 91%;
+    width: 69%;
 }
 
 .information {
-    background-color: #FCCB8F;
+    background-color: #F5E4C3;
     width: 29.3%;
     height: 91%;
     position: absolute;
@@ -31,3 +46,8 @@
     color: #da5a27;
     vertical-align: bottom;
 }
+
+/* #F1EB9A
+#F9989F
+#FCCB8F
+#da5a27 */
