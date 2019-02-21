@@ -51,6 +51,10 @@ body {
     padding: 2%;
 }
 
+.main div.table caption {
+    background-color: #34A7B2; 
+}
+
 .main div.table table{
     background-color: #34A7B2; 
     width: 100%;
