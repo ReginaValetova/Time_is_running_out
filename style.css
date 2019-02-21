@@ -5,7 +5,7 @@ body {
 .header {
     background-color: #5B2E35;
     color: #F5E4C3;
-    font-size: 2%;
+    font-size: 14px;
 }
 
 .main {
@@ -51,10 +51,11 @@ body {
 .main div.table {
     padding: 2%;
     padding-left: 0%;
+    padding-top: 0%;
 }
 
 .main div.table caption {
-     
+     font-size: 30px;
 }
 
 .main div.table table{
