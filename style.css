@@ -47,7 +47,10 @@ body {
     vertical-align: bottom;
 }
 
-/* #F1EB9A
-#F9989F
-#FCCB8F
-#da5a27 */
+
+.main div.table table{
+    background-color: #F5564E; 
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
