@@ -19,7 +19,7 @@ main {
     width: 69%;
 }
 
-.information {
+aside {
     background-color: #F5E4C3;
     width: 29.3%;
     height: 91%;
@@ -28,7 +28,7 @@ main {
     top: 8%;
 }
 
-.information table{
+aside table{
     
     left: 1%;
     width: 95%;
@@ -37,12 +37,12 @@ main {
     
 }
 
-.information caption{
+aside caption{
     color: #e21530;
     font-size: 30px;
 }
 
-.information td{
+aside td{
     border-bottom: 2px solid #da5a27;
     color: #da5a27;
     vertical-align: bottom;
