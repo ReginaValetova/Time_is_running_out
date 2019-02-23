@@ -48,7 +48,7 @@ main {
     vertical-align: bottom;
 }
 
-.main nav.table {
+main nav.table {
     padding: 2%;
     padding-left: 0%;
     padding-top: 0%;
@@ -56,12 +56,12 @@ main {
  
 }
 
-.main nav.table caption {
+main nav.table caption {
      font-size: 30px;
   
 }
 
-.main nav.table table{
+main nav.table table{
     background-color: #34A7B2; 
     width: 100%;
     padding: 10px;
@@ -69,7 +69,7 @@ main {
    
 }
 
-.main nav.table td{
+main nav.table td{
     background-color: #F5E4C3;
     padding: 2%;
     border-collapse: collapse;
