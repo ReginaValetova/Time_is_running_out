@@ -1,6 +1,3 @@
-body {
-    background-color: #F5564E;
-}
 
 header {
     background-color: #5B2E35;
@@ -8,9 +5,13 @@ header {
     font-size: 14px;
 }
 
+header table{
+    /* background-color: #5B2E35; */
+}
+
 main {
-    /* background-color: #F59AA3; */
-    background-color: green;
+    background-color: #F59AA3;
+    /* background-color: green; */
     color: rgb(15, 90, 97);
 
     /* position: absolute;
@@ -21,8 +22,8 @@ main {
 }
 
 aside {
-    /* background-color: #F5E4C3; */
-    background-color: blueviolet;
+    background-color: #F5E4C3;
+    /* background-color: blueviolet; */
     /* width: 29.3%;
     height: 91%;
     position: absolute;
@@ -112,7 +113,7 @@ main nav.table td{
   body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    /* grid-auto-rows: minmax(100px, auto); */
     grid-template-areas: 
       "head head head"
       "main main aside"
