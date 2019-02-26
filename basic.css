@@ -15,21 +15,22 @@
   }
   
   header {
-    color: #F5E4C3;
     background-color: #5B2E35;
+    color: gainsboro;
   }
   
   .container > div:nth-child(3n) {
-    color: #F5E4C3;
     background-color: #F5E4C3;
   }
   
-  .container > div:nth-child(2n) {
+  aside {
     background-color: #ff6f69;
+    color: gainsboro;
   }
   
-  .container > div:nth-child(4n) {
+  footer {
     background-color: #5B2E35;
+    color: gainsboro;
   }
 
   

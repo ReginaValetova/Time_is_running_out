@@ -14,7 +14,7 @@ header {
   grid-area: h;
 }
 
-.menu {
+aside {
   grid-area: m;
 }
 
@@ -22,7 +22,7 @@ header {
   grid-area: c;
 }
 
-.footer {
+footer {
   grid-area: f;
 }
 
