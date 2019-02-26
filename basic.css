@@ -3,23 +3,25 @@
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    color: #ffeead;
+    
   }
   
   html, body {
     box-sizing: border-box;
-    background-color: #ffeead;
+    background-color: #F59AA3;
     height: 100%;
     padding: 10px;
     margin: 0px;
   }
   
-  .container > div:nth-child(1n) {
-    background-color: #96ceb4;	
+  header {
+    color: #F5E4C3;
+    background-color: #5B2E35;
   }
   
   .container > div:nth-child(3n) {
-    background-color: #88d8b0;
+    color: #F5E4C3;
+    background-color: #F5E4C3;
   }
   
   .container > div:nth-child(2n) {
@@ -27,5 +29,7 @@
   }
   
   .container > div:nth-child(4n) {
-    background-color: #ffcc5c;
+    background-color: #5B2E35;
   }
+
+  
