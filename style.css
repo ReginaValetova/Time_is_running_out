@@ -1,13 +1,12 @@
 .container {
   height: 100%;
   display: grid;
-  grid-gap: 3px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 40px auto 40px;
   grid-template-areas: 
-      "h h h"
-      "c c m"
-      "f f f";
+      "h h h h h h h h h h h h"
+      "c c c c c c c c c m m m"
+      "f f f f f f f f f f f f";
 }
 
 header {
@@ -18,7 +17,7 @@ aside {
   grid-area: m;
 }
 
-.content {
+article {
   grid-area: c;
 }
 

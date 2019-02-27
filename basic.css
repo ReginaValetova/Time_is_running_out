@@ -10,7 +10,7 @@
     box-sizing: border-box;
     background-color: #F59AA3;
     height: 100%;
-    padding: 10px;
+    padding: 0px;
     margin: 0px;
   }
   
@@ -18,13 +18,14 @@
     background-color: #5B2E35;
     color: gainsboro;
   }
+
   
-  .container > div:nth-child(3n) {
-    background-color: #F5E4C3;
-  }
+  /* article {
+    background-color: #ff6f69;
+  } */
   
   aside {
-    background-color: #ff6f69;
+    background-color: #F5E4C3;
     color: gainsboro;
   }
   
@@ -33,4 +34,63 @@
     color: gainsboro;
   }
 
-  
+  /* Table work */
+
+  header > table {
+    text-align: center;
+    color:#F5E4C3;
+  }
+
+  footer > table {
+    text-align: center;
+    color:#F5E4C3;
+  }
+
+  nav > table {
+    border-collapse: collapse;
+    min-height: 50%;
+    width: 100%;
+  }
+
+  article caption {
+    padding-top: 3px;
+    border-bottom: 3px solid rgb(196, 75, 75);
+    color: #5B2E35;
+    font-size: 130%;
+  }
+
+  article tr {
+   border-bottom: 2px solid rgb(196, 75, 75);
+  }
+
+  article td {
+    color:#5B2E35;
+  }
+
+  aside > table {
+    width: 100%;
+    text-align: center;
+    color:#F5E4C3;
+  }
+
+  aside > table {
+    border-collapse: collapse;
+    min-height: 50%;
+  }
+
+  aside caption {
+    border-bottom: 3px solid rgb(231, 185, 56);
+    color: #5B2E35;
+    font-size: 130%;
+    color: #F59AA3;
+    padding-top: 3px;
+  }
+
+  aside tr {
+   
+    border-bottom: 2px solid rgb(231, 185, 56);
+  }
+
+  aside td {
+    color:#F59AA3;
+  }
