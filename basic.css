@@ -25,10 +25,10 @@
     color: gainsboro;
   }
   
-
-  nav {
-    background-color: goldenrod;
+  article, nav {
+    background-color: #FFFFFF;
   }
+
 
   footer, header {
     background-color: #232931;
@@ -43,3 +43,11 @@
     padding: 1.6%;
     padding-right: 3.75%;
   }
+
+aside > .caption {
+  background-color: #E2E7E4;
+  padding: 16.8%;
+  padding-top: 11.4%;
+  margin: auto;
+  width: 65%;
+}
