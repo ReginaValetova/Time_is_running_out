@@ -8,89 +8,38 @@
   
   html, body {
     box-sizing: border-box;
-    background-color: #F59AA3;
+   
     height: 100%;
     padding: 0px;
     margin: 0px;
   }
   
-  header {
-    background-color: #5B2E35;
-    color: gainsboro;
-  }
-
-  
-  /* article {
-    background-color: #ff6f69;
-  } */
-  
-  aside {
-    background-color: #F5E4C3;
+  aside{
+    background:rgba(0,0,0,0.1); 
+    background-image: url(https://cms-assets.tutsplus.com/uploads/users/33/posts/30712/image/Redpattern-min.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 26.5%; 
+    background-position: 0px 82px;
+    opacity: 0.65;
     color: gainsboro;
   }
   
-  footer {
-    background-color: #5B2E35;
-    color: gainsboro;
+
+  nav {
+    background-color: goldenrod;
   }
 
-  /* Table work */
-
-  header > table {
-    text-align: center;
-    color:#F5E4C3;
+  footer, header {
+    background-color: #232931;
+    color: #F0ECE2;
   }
 
-  footer > table {
-    text-align: center;
-    color:#F5E4C3;
-  }
 
-  nav > table {
-    border-collapse: collapse;
-    min-height: 50%;
-    width: 100%;
-  }
 
-  article caption {
-    padding-top: 3px;
-    border-bottom: 3px solid rgb(196, 75, 75);
-    color: #5B2E35;
-    font-size: 130%;
-  }
-
-  article tr {
-   border-bottom: 2px solid rgb(196, 75, 75);
-  }
-
-  article td {
-    color:#5B2E35;
-  }
-
-  aside > table {
-    width: 100%;
-    text-align: center;
-    color:#F5E4C3;
-  }
-
-  aside > table {
-    border-collapse: collapse;
-    min-height: 50%;
-  }
-
-  aside caption {
-    border-bottom: 3px solid rgb(231, 185, 56);
-    color: #5B2E35;
-    font-size: 130%;
-    color: #F59AA3;
-    padding-top: 3px;
-  }
-
-  aside tr {
-   
-    border-bottom: 2px solid rgb(231, 185, 56);
-  }
-
-  aside td {
-    color:#F59AA3;
+  header > div {
+    text-align: right;
+    font: 230% Avenir Next lighter;
+    padding: 1.6%;
+    padding-right: 3.75%;
   }

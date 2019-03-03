@@ -1,12 +1,13 @@
 .container {
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 40px auto 40px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 4.8% 26.5% auto 3%;
   grid-template-areas: 
-      "h h h h h h h h h h h h"
-      "c c c c c c c c c m m m"
-      "f f f f f f f f f f f f";
+      "h h h h h h h h h h"
+      "m m m m m m m m m m"
+      "c c c c c c c n n n"
+      "f f f f f f f f f f";
 }
 
 header {
@@ -21,7 +22,13 @@ article {
   grid-area: c;
 }
 
+nav {
+  grid-area: n;
+}
+
 footer {
   grid-area: f;
 }
+
+
 
