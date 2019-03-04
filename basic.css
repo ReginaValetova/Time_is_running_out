@@ -1,53 +1,99 @@
-.container > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    
-  }
-  
   html, body {
-    box-sizing: border-box;
-   
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-  }
+  box-sizing: border-box;
   
-  aside{
-    background:rgba(0,0,0,0.1); 
-    background-image: url(https://cms-assets.tutsplus.com/uploads/users/33/posts/30712/image/Redpattern-min.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 26.5%; 
-    background-position: 0px 82px;
-    opacity: 0.65;
-    color: gainsboro;
-  }
-  
-  article, nav {
-    background-color: #FFFFFF;
-  }
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+aside{
+  background:rgba(0,0,0,0.1); 
+  background-image: url(https://cms-assets.tutsplus.com/uploads/users/33/posts/30712/image/Redpattern-min.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 26.5%; 
+  background-position: 0px 82px;
+  opacity: 0.65;
+  color: gainsboro;
+  /* flex */
+  display: flex;
+  justify-content: center;
+}
+
+article, nav {
+  background-color: #FFFFFF;
+}
 
 
-  footer, header {
-    background-color: #232931;
-    color: #F0ECE2;
-  }
+footer, header {
+  background-color: #232931;
+  color: #F0ECE2;
+  background-attachment: fixed;
+}
 
 
 
-  header > div {
-    text-align: right;
-    font: 230% Avenir Next lighter;
-    padding: 1.6%;
-    padding-right: 3.75%;
-  }
+header > div {
+  text-align: right;
+  font: 230% Avenir Next lighter;
+  padding: 1.6%;
+  padding-right: 3.75%;
+}
 
 aside > .caption {
+  display: flex;
   background-color: #E2E7E4;
-  padding: 16.8%;
+  
   padding-top: 11.4%;
   margin: auto;
   width: 65%;
+  border-radius: 20px;
+}
+
+article
+{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-top: 6%;
+  margin-left: 10%;
+}
+
+article > .timeBlock {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 13%;
+}
+
+
+.projectStep {
+  flex: 4;
+  background-color: #DBBBBA;
+  color: #4D1510;
+  border-radius:20px;
+  margin-bottom: 3%;
+}
+
+.time{
+  flex: 1;
+  background-color: #88B04B;
+  border-radius:20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: auto;
+}
+
+.timeNumber {
+  flex:1;
+  margin-bottom: 13%;
+  color: #959D99;
+  font-size: 100%;
+  text-align: center;
+  margin: 4em;
+  /* font-size: 30px; */
 }
