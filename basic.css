@@ -84,16 +84,16 @@ article > .timeBlock {
 nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
   /* justify-content: center; */
-  margin: auto;
+  
 }
 
 .timeNumber {
   flex:1;
-  margin-bottom: 13%;
   color: #959D99;
   font-size: 100%;
   text-align: center;
-  margin: 4em;
-  /* font-size: 30px; */
+  /* margin-top: 40%; */
+  font-size: 60px;
 }
