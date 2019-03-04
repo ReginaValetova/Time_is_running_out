@@ -1,9 +1,19 @@
-  html, body {
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Roboto');  
   
+html, body {
+  box-sizing: border-box;
   height: 100%;
   padding: 0px;
   margin: 0px;
+  font-family: 'Roboto';
+  font-size: 30px;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: baseline;
+  min-height: 100%
 }
 
 aside{
@@ -14,60 +24,66 @@ aside{
   background-size: 100% 26.5%; 
   background-position: 0px 82px;
   opacity: 0.65;
-  color: gainsboro;
-  /* flex */
+
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 23%;
 }
 
 article, nav {
   background-color: #FFFFFF;
 }
 
-
 footer, header {
   background-color: #232931;
   color: #F0ECE2;
-  background-attachment: fixed;
 }
 
-
+header {
+  font-size: 1.3rem;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  padding: 1em 2em 1em 0; 
+  height: 1.8rem;
+}
 
 header > div {
-  text-align: right;
-  font: 230% Avenir Next lighter;
-  padding: 1.6%;
-  padding-right: 3.75%;
+  display: flex;
+  align-items: center;
 }
 
 aside > .caption {
   display: flex;
+  flex: 0 0 auto;
   background-color: #E2E7E4;
-  
-  padding-top: 11.4%;
-  margin: auto;
+  padding: 2em;
   width: 65%;
   border-radius: 20px;
 }
 
-article
-{
+article.board {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
+  justify-content: space-around;
   /* justify-content: center; */
-  margin-top: 6%;
-  margin-left: 10%;
+  margin: 2em 1em;
 }
 
-article > .timeBlock {
-  flex:1;
+.task {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 13%;
+  flex-flow: row nowrap;
+  flex:0 0 auto;
+  width: 100%;
+  justify-content: space-around;
 }
 
+.task--description{
+  display: flex;
+  flex-flow: column nowrap;
+}
 
-.projectStep {
+.task--name {
   flex: 4;
   background-color: #DBBBBA;
   color: #4D1510;
@@ -75,13 +91,13 @@ article > .timeBlock {
   margin-bottom: 3%;
 }
 
-.time{
+.task--progress{
   flex: 1;
   background-color: #88B04B;
   border-radius:20px;
 }
 
-nav {
+.task--countdown {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,8 +108,10 @@ nav {
 .timeNumber {
   flex:1;
   color: #959D99;
-  font-size: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   text-align: center;
   /* margin-top: 40%; */
-  font-size: 60px;
+  font-size: 1em;
 }

@@ -1,13 +1,14 @@
-.container {
+/* .container {
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  max-width: 100%;
+  grid-template-columns: 1fr;
   grid-template-rows: 4.8% 26.5% auto 3%;
   grid-template-areas: 
-      "h h h h h h h h h h"
-      "m m m m m m m m m m"
-      "c c c c c c c n n n"
-      "f f f f f f f f f f";
+      "h"
+      "m"
+      "c"
+      "f";
 }
 
 header {
@@ -22,13 +23,9 @@ article {
   grid-area: c;
 }
 
-nav {
-  grid-area: n;
-}
-
 footer {
   grid-area: f;
 }
 
-
+ */
 
