@@ -2,7 +2,6 @@
   
 html, body {
   box-sizing: border-box;
-  height: 100%;
   padding: 0px;
   margin: 0px;
   font-family: 'Roboto';
@@ -14,7 +13,7 @@ html, body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: baseline;
-  min-height: 100%
+  min-height: 100%;
 }
 
 header {
@@ -32,7 +31,7 @@ header > div {
   align-items: center;
 }
 
-section{
+main{
   background:rgba(0,0,0,0.1); 
   background-image: url(https://cms-assets.tutsplus.com/uploads/users/33/posts/30712/image/Redpattern-min.jpg);
   background-repeat: no-repeat;
@@ -40,32 +39,43 @@ section{
   background-size: 100% 26.5%; 
   background-position: 0px 82px;
   opacity: 0.65;
-
   display: flex;
   justify-content: center;
   align-items: center;
   height: 23%;
 }
 
-section > .caption {
+main > .caption {
   display: flex;
   flex: 0 0 auto;
+  flex-flow: column nowrap;
   background-color: #E2E7E4;
-  padding: 2em;
-  width: 65%;
+  color: #5e0104;
+  padding: 0.5em;
+  width: 63%;
+  border-radius: 20px;
+  font-size: 2.5em;
+  text-align: center;
+  align-items: center; 
+  font-family: Marion Bold;
+}
+
+.caption--time{
+  height: 0.3em;
+  width: 8em;
+  background-color: rgb(80, 136, 2);
   border-radius: 20px;
 }
 
 article {
-  height: 67%;
+  max-height: 67%;
 }
 
 article.board {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
-  /* justify-content: center; */
-  margin: 0em 1em;
+  margin: 0.5em 1em;
 }
 
 .task {
@@ -75,6 +85,7 @@ article.board {
   width: 100%;
   justify-content: space-around;
   height: 4em;
+  padding-top: 2em;
 }
 
 .task--description{
@@ -84,11 +95,14 @@ article.board {
 }
 
 .task--name {
-  flex: 3;
+  flex: 4;
   background-color: #DBBBBA;
   color: #4D1510;
   border-radius:20px;
   margin-bottom: 3%;
+  font-family: Marion;
+  font-size: 1.5em;
+  vertical-align: middle;
 }
 
 .task--progress{
@@ -102,7 +116,11 @@ article.board {
   flex-direction: column;
   align-items: center;
   width: 20%;
-  /* justify-content: center; */
+  justify-content: center;
+  color: rgb(163, 163, 163);
+  font-size: 1.5em;
+  font-family: Marion; 
+  font-weight: bold;
   
 }
 
@@ -110,4 +128,8 @@ footer{
   height:1.9em;
   background-color: #232931;
   color: #F0ECE2;
+  width: 100%;
+  left:0px;
+  bottom: 0px;
+  position: fixed;
 }
