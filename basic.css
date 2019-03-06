@@ -32,7 +32,7 @@ header > div {
   align-items: center;
 }
 
-aside{
+section{
   background:rgba(0,0,0,0.1); 
   background-image: url(https://cms-assets.tutsplus.com/uploads/users/33/posts/30712/image/Redpattern-min.jpg);
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@ aside{
   height: 23%;
 }
 
-aside > .caption {
+section > .caption {
   display: flex;
   flex: 0 0 auto;
   background-color: #E2E7E4;
