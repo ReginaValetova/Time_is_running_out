@@ -86,7 +86,7 @@ article.board {
   flex:0 0 auto;
   width: 100%;
   justify-content: space-around;
-  height: 5em;
+  height: 4em;
 }
 
 .task--description{
@@ -96,10 +96,9 @@ article.board {
 }
 
 .task--name {
-  flex: 4;
+  flex: 3;
   background-color: #DBBBBA;
   color: #4D1510;
-  height: 1em;
   border-radius:20px;
   margin-bottom: 3%;
 }
@@ -108,7 +107,6 @@ article.board {
   flex: 1;
   background-color: #88B04B;
   border-radius:20px;
-  height:1.5em;
 }
 
 .task--countdown {
