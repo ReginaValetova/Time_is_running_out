@@ -91,7 +91,7 @@ article.board {
 .task--description{
   display: flex;
   flex-flow: column nowrap;
-  width: 65%;
+  width: 60%;
 }
 
 .task--name {
