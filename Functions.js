@@ -16,14 +16,14 @@ function countdown(time) {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
     // Display the result in the element with id="demo"
-    document.getElementsByClassName("task--countdown").innerHTML = days + "d " + hours + "h "
+    document.getElementById("task--countdown").innerHTML = days + "d " + hours + "h "
     + minutes + "m " + seconds + "s ";
     // If the count down is finished, write some text 
     if (distance < 0) { 
         clearInterval(x); 
-        document.getElementsByClassName("task--countdown").innerHTML = "EXPIRED";
+        document.getElementById("task--countdown").innerHTML = "EXPIRED";
     } 
     }, 1000); 
 } 
 
-document.getElementsByClassName("task--countdown").innerHTML = countdown("Jan 5, 2021 15:37:25"); 
+countdown("Jan 5, 2021 15:37:25"); 
