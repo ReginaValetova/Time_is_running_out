@@ -88,7 +88,7 @@ article.board {
   flex:0 0 auto;
   width: 100%;
   justify-content: space-around;
-  height: 4em;
+  height: 4.5em;
   padding-top: 2em;
 }
 
@@ -105,8 +105,10 @@ article.board {
   border-radius:20px;
   margin-bottom: 3%;
   font-family: Marion;
-  font-size: 1.5em;
-  vertical-align: middle;
+}
+
+p {
+  text-align: center;
 }
 
 .task--progress{
