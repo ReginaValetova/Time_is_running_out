@@ -24,6 +24,10 @@ header {
   height: 1.5rem;
   background-color: #232931;
   color: #F0ECE2;
+  top: 0px;
+  right: 0px;
+  left:0px;
+  position: fixed;
 }
 
 header > div {
