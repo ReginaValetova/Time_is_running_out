@@ -49,16 +49,35 @@ function outputTimer() {
     time6 = "March 19, 2019 14:37:25"]
 
     for (let i = 0; i < 6; i++) {
-        countdown(times[i], "task--countdown"+i);
+        countdown(times[i], "task--countdown" + i);
     }
 
 }
 
 outputTimer();
 
-for (let i = 100; i < 0; i--) {
-    var timerId = setInterval(function() {
-        document.getElementsByClassName("my.task--progressBtn").style.width = "5%";
-      }, 2000);
-}
+function greenLine() {
+    var start = Date.now(); // сохранить время начала
 
+    var timer = setInterval(function() {
+    // вычислить сколько времени прошло с начала анимации
+    var timePassed = Date.now() - start;
+
+    if (timePassed >= 5100) {
+        clearInterval(timer); // конец через 3 секунды
+        return;
+    }
+
+    // рисует состояние анимации, соответствующее времени timePassed
+    draw(timePassed);
+
+    }, 20);
+
+    // в то время как timePassed идёт от 0 до 3000
+    // width принимает значения от 0 до 400px
+    function draw(timePassed) {
+    line.style.width = ((100 - timePassed / 50) + '%');
+    }
+};
+
+greenLine();
