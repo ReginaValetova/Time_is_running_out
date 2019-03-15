@@ -1,47 +1,57 @@
-function countdown(time, elementClass) {
+function commonFunction(time, elementClass) {
+    var startTime = new Date("March 16, 2019 02:40:25").getTime();
     // Set the date we're counting down to
     var countDownDate = new Date(time).getTime();
     // Update the count down every 1 second
     var x = setInterval(function() {
-    
     // Get todays date and time
     var now = new Date().getTime();
     // Find the distance between now and the count down date
     var distance = countDownDate - now;
+        
+    function Timer() {
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Display the result in the element with id="demo"
     
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Display the result in the element with id="demo"
-   
-    if (days == 0) {
-        if (hours == 0) {
-            if (minutes == 0) {
+        if (days == 0) {
+            if (hours == 0) {
+                if (minutes == 0) {
+                    document.getElementById(elementClass).innerHTML = 
+                    + minutes + "m " + seconds + "s "; };
+            } else {
                 document.getElementById(elementClass).innerHTML = 
-                + minutes + "m " + seconds + "s "; };
+                hours + "h " + minutes + "m " + seconds + "s "; };
+        
         } else {
             document.getElementById(elementClass).innerHTML = 
-            hours + "h " + minutes + "m " + seconds + "s "; };
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        };
+    }
     
-    } else {
-        document.getElementById(elementClass).innerHTML = 
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    function greenLine() {
+        line.style.width = 100/(startTime/distance) + '%';
+        console.log(`${startTime} ${distance}`);
     };
 
- 
+    Timer();
+    greenLine();
     // If the count down is finished, write some text 
     if (distance < 0) { 
         clearInterval(x); 
         document.getElementById(elementClass).innerHTML = "EXPIRED";
     } 
+
     }, 1000); 
 } 
 
+
 function outputTimer() {
-    var times = ["March 14, 2019 14:30:25",
+    var times = ["March 16, 2019 03:45:25",
     time2 = "March 15, 2019 14:30:20",
     time3 = "March 16, 2019 14:50:05",
     time4 = "March 17, 2019 14:10:15",
@@ -49,35 +59,11 @@ function outputTimer() {
     time6 = "March 19, 2019 14:37:25"]
 
     for (let i = 0; i < 6; i++) {
-        countdown(times[i], "task--countdown" + i);
+        commonFunction(times[i], "task--countdown" + i);
     }
 
 }
 
 outputTimer();
 
-function greenLine() {
-    var start = Date.now(); // сохранить время начала
 
-    var timer = setInterval(function() {
-    // вычислить сколько времени прошло с начала анимации
-    var timePassed = Date.now() - start;
-
-    if (timePassed >= 5100) {
-        clearInterval(timer); // конец через 3 секунды
-        return;
-    }
-
-    // рисует состояние анимации, соответствующее времени timePassed
-    draw(timePassed);
-
-    }, 20);
-
-    // в то время как timePassed идёт от 0 до 3000
-    // width принимает значения от 0 до 400px
-    function draw(timePassed) {
-    line.style.width = ((100 - timePassed / 50) + '%');
-    }
-};
-
-greenLine();
