@@ -55,3 +55,10 @@ function outputTimer() {
 }
 
 outputTimer();
+
+for (let i = 100; i < 0; i--) {
+    var timerId = setInterval(function() {
+        document.getElementsByClassName("my.task--progressBtn").style.width = "5%";
+      }, 2000);
+}
+

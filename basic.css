@@ -115,6 +115,7 @@ p {
   flex: 1;
   background-color: #88B04B;
   border-radius:20px;
+ 
 }
 
 .task--countdown {
@@ -139,3 +140,4 @@ footer{
   bottom: 0px;
   position: fixed;
 }
+
