@@ -1,67 +1,68 @@
-function commonFunction(time, elementClass) {
-    var startTime = new Date("March 16, 2019 02:40:25").getTime();
-    // Set the date we're counting down to
-    var countDownDate = new Date(time).getTime();
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-    // Get todays date and time
-    var now = new Date().getTime();
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-        
-    function Timer() {
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        // Display the result in the element with id="demo"
+function Timer(element,distance, killInterval) {
+  // Time calculations for days, hoursUntil, minutesUntil and secondsUntil
+  const daysUntil = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hoursUntil = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutesUntil = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const secondsUntil = Math.floor((distance % (1000 * 60)) / 1000);
     
-        if (days == 0) {
-            if (hours == 0) {
-                if (minutes == 0) {
-                    document.getElementById(elementClass).innerHTML = 
-                    + minutes + "m " + seconds + "s "; };
-            } else {
-                document.getElementById(elementClass).innerHTML = 
-                hours + "h " + minutes + "m " + seconds + "s "; };
-        
-        } else {
-            document.getElementById(elementClass).innerHTML = 
-            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-        };
+  if (distance <= 0) { 
+    clearInterval(killInterval); 
+    document.getElementById(element).innerHTML = "EXPIRED";
+
+  } else {
+    if (daysUntil === 0) {
+      if (hoursUntil === 0) {
+            document.getElementById(element).innerHTML = 
+            minutesUntil + "m " + secondsUntil + "s "; 
+          } else {
+          document.getElementById(element).innerHTML = 
+          hoursUntil + "h " + minutesUntil + "m " + secondsUntil + "s "; 
+        }
+    } else {
+      document.getElementById(element).innerHTML = 
+      daysUntil + "d " + hoursUntil + "h " + minutesUntil + "m " + secondsUntil + "s ";
     }
-    
-    function greenLine() {
-        line.style.width = 100/(startTime/distance) + '%';
-        console.log(`${startTime} ${distance}`);
-    };
+  }
+}
 
-    Timer();
-    greenLine();
-    // If the count down is finished, write some text 
-    if (distance < 0) { 
-        clearInterval(x); 
-        document.getElementById(elementClass).innerHTML = "EXPIRED";
-    } 
+/////////
 
-    }, 1000); 
+function greenLine(element,distance, taskCompleteDate, taskCreated) {
+  const taskTotalTime = taskCompleteDate - taskCreated;
+  const percents = 100/(taskTotalTime/distance) + '%';
+  element.style.width = percents;
+};
+
+///////////////
+
+function Task(time, elementId) {
+
+  const taskCreated = new Date().getTime();
+  const taskCompleteDate = new Date(time).getTime();
+  
+
+  const x = setInterval(function() { // Update the count down every 1 seconstd
+    const now = new Date().getTime(); // Get todaysUntil date and time
+    const distance = taskCompleteDate - now;
+
+    Timer(elementId,distance,x)
+    greenLine(line0, distance, taskCompleteDate, taskCreated)
+
+  }, 1000); 
 } 
 
 
 function outputTimer() {
-    var times = ["March 16, 2019 03:45:25",
-    time2 = "March 15, 2019 14:30:20",
-    time3 = "March 16, 2019 14:50:05",
-    time4 = "March 17, 2019 14:10:15",
-    time5 = "March 30, 2019 14:46:55",
-    time6 = "March 19, 2019 14:37:25"]
+  const times = [
+    ["task--countdown0", "March 16, 2019 15:57:00"],
+    ["task--countdown1", "March 15, 2019 14:30:20"],
+    ["task--countdown2", "March 16, 2019 15:50:05"],
+    ["task--countdown3", "March 17, 2019 14:10:15"],
+    ["task--countdown4", "March 30, 2019 14:46:55"],
+    ["task--countdown5", "March 19, 2019 14:37:25"]
+  ];
 
-    for (let i = 0; i < 6; i++) {
-        commonFunction(times[i], "task--countdown" + i);
-    }
-
+  times.forEach((time) => Task(time[1], time[0]) )
 }
 
 outputTimer();
