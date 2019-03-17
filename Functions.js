@@ -1,4 +1,4 @@
-function Timer(element,distance, killInterval) {
+const Timer = (element,distance, killInterval) => {
   // Time calculations for days, hoursUntil, minutesUntil and secondsUntil
   const daysUntil = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hoursUntil = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -27,7 +27,7 @@ function Timer(element,distance, killInterval) {
 
 /////////
 
-function greenLine(element,distance, taskCompleteDate, taskCreated) {
+const greenLine = (element,distance, taskCompleteDate, taskCreated) => {
   const taskTotalTime = taskCompleteDate - taskCreated;
   const percents = 100/(taskTotalTime/distance) + '%';
   element.style.width = percents;
@@ -35,13 +35,13 @@ function greenLine(element,distance, taskCompleteDate, taskCreated) {
 
 ///////////////
 
-function Task(time, elementId) {
-
-  const taskCreated = new Date().getTime();
+const Task = (time, elementId) => {
+  
+  const taskCreated = new Date("March 1, 2019 15:57:00").getTime();
   const taskCompleteDate = new Date(time).getTime();
   
 
-  const x = setInterval(function() { // Update the count down every 1 seconstd
+  const x = setInterval(() => { // Update the count down every 1 seconstd
     const now = new Date().getTime(); // Get todaysUntil date and time
     const distance = taskCompleteDate - now;
 
@@ -52,17 +52,20 @@ function Task(time, elementId) {
 } 
 
 
-function outputTimer() {
+const outputTimer = () => {
   const times = [
-    ["task--countdown0", "March 16, 2019 15:57:00"],
-    ["task--countdown1", "March 15, 2019 14:30:20"],
-    ["task--countdown2", "March 16, 2019 15:50:05"],
-    ["task--countdown3", "March 17, 2019 14:10:15"],
+    ["task--countdown0", "March 18, 2019 23:39:00"],
+    ["task--countdown1", "March 19, 2019 14:30:20"],
+    ["task--countdown2", "March 21, 2019 15:50:05"],
+    ["task--countdown3", "March 30, 2019 14:10:15"],
     ["task--countdown4", "March 30, 2019 14:46:55"],
     ["task--countdown5", "March 19, 2019 14:37:25"]
   ];
 
-  times.forEach((time) => Task(time[1], time[0]) )
+  for (let i = 0; i < 5; i++) {
+    Task(times[i][1], times[i][0]);
+  }
+  // times.forEach(time => Task(time[0], time[1]) );
 }
 
 outputTimer();
