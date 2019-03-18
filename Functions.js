@@ -27,24 +27,23 @@ const Timer = (element,distance, killInterval) => {
 
 /////////
 
-const greenLine = (element,distance, taskCompleteDate, taskCreated) => {
+const greenLine = (line, distance, taskCompleteDate, taskCreated) => {
   const taskTotalTime = taskCompleteDate - taskCreated;
-  const percents = 100/(taskTotalTime/distance) + '%';
-  element.style.width = percents;
+  const percents = (100)/(taskTotalTime/distance) + '%';
+  line.style.width = percents;
 };
 
 ///////////////
 
 const Task = (time, elementId) => {
-  
-  const taskCreated = new Date("March 1, 2019 15:57:00").getTime();
+  const taskCreated = new Date("March 15, 2019 23:39:00").getTime();
   const taskCompleteDate = new Date(time).getTime();
+  // const taskCompleteDate = new Date(time).getTime();
   
-
   const x = setInterval(() => { // Update the count down every 1 seconstd
     const now = new Date().getTime(); // Get todaysUntil date and time
     const distance = taskCompleteDate - now;
-
+ 
     Timer(elementId,distance,x)
     greenLine(line0, distance, taskCompleteDate, taskCreated)
 
@@ -54,14 +53,15 @@ const Task = (time, elementId) => {
 
 const outputTimer = () => {
   const times = [
-    ["task--countdown0", "March 18, 2019 23:39:00"],
-    ["task--countdown1", "March 19, 2019 14:30:20"],
-    ["task--countdown2", "March 21, 2019 15:50:05"],
-    ["task--countdown3", "March 30, 2019 14:10:15"],
-    ["task--countdown4", "March 30, 2019 14:46:55"],
-    ["task--countdown5", "March 19, 2019 14:37:25"]
+    ["task--countdown0", "March 20, 2019 23:39:00", "line0"],
+    ["task--countdown1", "March 19, 2019 14:30:20", "line1"],
+    ["task--countdown2", "March 21, 2019 15:50:05", "line2"],
+    ["task--countdown3", "March 30, 2019 14:10:15", "line3"],
+    ["task--countdown4", "March 30, 2019 14:46:55", "line4"],
+    ["task--countdown5", "March 19, 2019 14:37:25", "line5"]
   ];
 
+  console.log(times[1][3]);
   for (let i = 0; i < 5; i++) {
     Task(times[i][1], times[i][0]);
   }
