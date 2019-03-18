@@ -35,7 +35,7 @@ const greenLine = (line, distance, taskCompleteDate, taskCreated) => {
 
 ///////////////
 
-const Task = (time, elementId) => {
+const Task = (elementId, time, line) => {
   const taskCreated = new Date("March 15, 2019 23:39:00").getTime();
   const taskCompleteDate = new Date(time).getTime();
   // const taskCompleteDate = new Date(time).getTime();
@@ -43,15 +43,14 @@ const Task = (time, elementId) => {
   const x = setInterval(() => { // Update the count down every 1 seconstd
     const now = new Date().getTime(); // Get todaysUntil date and time
     const distance = taskCompleteDate - now;
- 
     Timer(elementId,distance,x)
-    greenLine(line0, distance, taskCompleteDate, taskCreated)
+    greenLine(line, distance, taskCompleteDate, taskCreated)
 
   }, 1000); 
 } 
 
 
-const outputTimer = () => {
+// const outputTimer = () => {
   const times = [
     ["task--countdown0", "March 20, 2019 23:39:00", "line0"],
     ["task--countdown1", "March 19, 2019 14:30:20", "line1"],
@@ -61,13 +60,14 @@ const outputTimer = () => {
     ["task--countdown5", "March 19, 2019 14:37:25", "line5"]
   ];
 
-  console.log(times[1][3]);
-  for (let i = 0; i < 5; i++) {
-    Task(times[i][1], times[i][0]);
-  }
-  // times.forEach(time => Task(time[0], time[1]) );
-}
+  times.map(time => (Task(time[0], time[1], time[2])))
 
-outputTimer();
+  // for (let i = 0; i < 5; i++) {
+  //   Task(times[i][1], times[i][0], times[i][2]);
+  // }
+  // times.forEach(time => Task(time[0], time[1]) );
+// }
+
+// outputTimer();
 
 
